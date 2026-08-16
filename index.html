@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Involved — Campus. Connected.</title>
+<style>
+:root{--navy:#071b3a;--blue:#1769ff;--cyan:#16b8ff;--green:#20c997;--ink:#10213d;--muted:#66758d;--bg:#f5f8fc;--card:#fff;--line:#e6edf6;--danger:#ef476f;--gold:#f4b740}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+button{font:inherit;cursor:pointer}.app{min-height:100vh}.nav{height:72px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 5vw;position:sticky;top:0;z-index:10}.brand{display:flex;gap:11px;align-items:center;font-weight:800;font-size:20px}.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,var(--blue),var(--cyan));display:grid;place-items:center;color:#fff;font-weight:900}.navlinks{display:flex;gap:28px;color:var(--muted);font-size:14px}.navlinks span{cursor:pointer}.navcta{border:0;background:var(--navy);color:white;padding:11px 17px;border-radius:10px;font-weight:700}
+.hero{background:radial-gradient(circle at 80% 15%,#d9f2ff 0,#eef7ff 24%,#f5f8fc 55%);padding:78px 7vw 72px;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;padding:7px 11px;border-radius:999px;background:#e8f1ff;color:var(--blue);font-size:12px;font-weight:800;letter-spacing:.5px}.hero h1{font-size:clamp(43px,6vw,72px);line-height:.98;margin:18px 0;color:var(--navy);letter-spacing:-3px}.hero h1 em{font-style:normal;color:var(--blue)}.hero p{font-size:19px;line-height:1.65;color:var(--muted);max-width:630px}.actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}.primary,.secondary{padding:14px 19px;border-radius:11px;font-weight:800}.primary{background:var(--blue);color:#fff;border:0;box-shadow:0 10px 25px #1769ff2b}.secondary{background:#fff;border:1px solid var(--line);color:var(--ink)}
+.mock{background:#fff;border:1px solid #dfe8f3;border-radius:22px;padding:16px;box-shadow:0 25px 70px #163d7a18;transform:rotate(1deg)}.mockbar{display:flex;justify-content:space-between;color:var(--muted);font-size:11px;padding:3px 4px 13px}.mockbody{display:grid;grid-template-columns:125px 1fr;min-height:350px}.side{background:var(--navy);border-radius:14px 0 0 14px;padding:18px 12px;color:#c7d6ee}.side b{color:white;display:block;margin-bottom:24px}.side div{padding:9px;border-radius:8px;margin:4px 0;font-size:11px}.side .on{background:#ffffff17;color:white}.dash{padding:17px}.dash h3{margin:0 0 4px}.tiny{font-size:10px;color:var(--muted)}.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:15px 0}.metric{border:1px solid var(--line);padding:11px;border-radius:10px}.metric strong{font-size:18px;display:block;margin-top:4px}.positive{color:#11a879}.balance{color:#ef7d27}.chart{height:100px;border:1px solid var(--line);border-radius:10px;padding:10px;display:flex;align-items:end;gap:8px}.bar{flex:1;background:linear-gradient(#58b7ff,#1769ff);border-radius:5px 5px 2px 2px}.trust{display:flex;gap:8px;align-items:center;margin-top:12px;font-size:10px;color:var(--muted)}
+section{padding:78px 7vw}.center{text-align:center;max-width:780px;margin:auto}.center h2{font-size:40px;letter-spacing:-1.5px;margin:10px 0}.center p{color:var(--muted);line-height:1.7}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}.card{background:var(--card);border:1px solid var(--line);border-radius:17px;padding:25px;box-shadow:0 8px 30px #183b6910}.icon{width:42px;height:42px;border-radius:12px;background:#eaf2ff;color:var(--blue);display:grid;place-items:center;font-weight:900}.card h3{margin:18px 0 8px}.card p{color:var(--muted);line-height:1.6;font-size:14px}.dark{background:var(--navy);color:#fff}.dark .center p,.dark .card p{color:#b8c7dd}.dark .card{background:#10284d;border-color:#1b3965}.dark .icon{background:#173968}.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.points{display:grid;gap:12px;margin-top:25px}.point{display:flex;gap:12px;align-items:flex-start}.check{width:25px;height:25px;border-radius:50%;background:#dff8ef;color:#0ca477;display:grid;place-items:center;font-size:13px;font-weight:900;flex:none}.pillbox{background:#10284d;border:1px solid #23466f;border-radius:20px;padding:25px}.row{display:flex;justify-content:space-between;border-bottom:1px solid #244469;padding:15px 0}.row:last-child{border:0}.amount{font-weight:900}.pricing{max-width:440px;margin:30px auto 0;text-align:center}.price{font-size:52px;font-weight:900;color:var(--navy)}.price small{font-size:15px;color:var(--muted);font-weight:600}.cta{background:linear-gradient(120deg,#0a2350,#1769ff);color:#fff;text-align:center;padding:80px 7vw}.cta h2{font-size:42px;margin:0 0 12px}.cta p{color:#d9e6fa}.cta .primary{background:#fff;color:var(--navy);margin-top:15px}.footer{padding:25px 7vw;background:#04142c;color:#8ea2c0;font-size:12px;display:flex;justify-content:space-between}
+.modal{display:none;position:fixed;inset:0;background:#071b3acc;z-index:30;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modalbox{background:#fff;border-radius:20px;width:min(900px,100%);max-height:90vh;overflow:auto;padding:28px}.close{float:right;border:0;background:#eef3f9;border-radius:8px;padding:7px}.login{max-width:430px;margin:auto}.login input{width:100%;padding:13px;border:1px solid var(--line);border-radius:9px;margin:7px 0 14px}.login button{width:100%;padding:13px;border:0;border-radius:9px;background:var(--blue);color:#fff;font-weight:800}.demo{background:#edf5ff;padding:12px;border-radius:10px;font-size:12px;color:#31577e;margin:12px 0}
+@media(max-width:850px){.hero,.split{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.navlinks{display:none}.hero{padding-top:50px}.hero h1{letter-spacing:-2px}.mock{transform:none}.footer{display:block}.footer span{display:block;margin:5px 0}}
+</style>
+</head>
+<body>
+<div class="app">
+<nav class="nav">
+  <div class="brand"><div class="logo">I</div> Involved</div>
+  <div class="navlinks"><span onclick="scrollToId('solution')">Solution</span><span onclick="scrollToId('features')">Features</span><span onclick="scrollToId('universities')">Universities</span><span onclick="scrollToId('business')">Business</span></div>
+  <button class="navcta" onclick="openDemo()">Live Demo</button>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="eyebrow">HIGHER EDUCATION • SPONSOR TRANSPARENCY</span>
+    <h1>When parents are informed, <em>students perform.</em></h1>
+    <p>Involved connects universities with the parents and sponsors who support students — giving authorized sponsors a clear, secure view of academic progress and tuition status.</p>
+    <div class="actions"><button class="primary" onclick="openDemo()">Explore the Demo →</button><button class="secondary" onclick="scrollToId('business')">See the Business Model</button></div>
+    <div class="trust">✓ Institution-authorized &nbsp; • &nbsp; ✓ Read-only visibility &nbsp; • &nbsp; ✓ Built for universities</div>
+  </div>
+  <div class="mock">
+    <div class="mockbar"><b>INVOLVED PARENT PORTAL</b><span>● Demo environment</span></div>
+    <div class="mockbody">
+      <div class="side"><b>Involved</b><div class="on">Dashboard</div><div>Academics</div><div>Finance</div><div>Alerts</div><div>Profile</div></div>
+      <div class="dash">
+        <div class="tiny">WELCOME BACK</div><h3>Sarah Namukasa</h3><div class="tiny">Sponsor • Brian Namukasa</div>
+        <div class="metrics"><div class="metric"><span class="tiny">GPA</span><strong>3.62</strong></div><div class="metric"><span class="tiny">STATUS</span><strong class="positive">Active</strong></div><div class="metric"><span class="tiny">BALANCE</span><strong class="balance">UGX 820K</strong></div></div>
+        <div class="tiny">ACADEMIC PERFORMANCE</div><div class="chart"><div class="bar" style="height:48%"></div><div class="bar" style="height:58%"></div><div class="bar" style="height:67%"></div><div class="bar" style="height:76%"></div><div class="bar" style="height:84%"></div><div class="bar" style="height:92%"></div></div>
+        <div class="trust">✓ Data verified by institution • Last sync 09:42</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="solution">
+ <div class="center"><span class="eyebrow">THE GAP</span><h2>Parents finance education. Visibility shouldn't be a guessing game.</h2><p>Involved creates a structured channel between institutions and authorized sponsors, reducing information gaps around academic progress, registration and fees.</p></div>
+ <div class="grid">
+  <div class="card"><div class="icon">01</div><h3>Visibility gap</h3><p>Sponsors can be responsible for tuition while having limited structured visibility into the student's academic journey.</p></div>
+  <div class="card"><div class="icon">02</div><h3>Communication overload</h3><p>Universities can centralize common sponsor questions through a controlled digital experience.</p></div>
+  <div class="card"><div class="icon">03</div><h3>Accountability</h3><p>Verified information helps families make earlier, better-informed decisions about fees and academic support.</p></div>
+ </div>
+</section>
+
+<section class="dark" id="features">
+ <div class="center"><span class="eyebrow">ONE PLATFORM</span><h2>Everything a sponsor needs. Nothing they don't.</h2><p>A focused, read-only experience powered by institution-controlled information.</p></div>
+ <div class="grid">
+  <div class="card"><div class="icon">A</div><h3>Academic visibility</h3><p>Semester, registration status, courses, results, GPA trends, failed papers and retakes.</p></div>
+  <div class="card"><div class="icon">₵</div><h3>Financial transparency</h3><p>Tuition required, payments made, outstanding balance, payment history and deadline alerts.</p></div>
+  <div class="card"><div class="icon">!</div><h3>Priority alerts</h3><p>Bring important academic, registration and financial events to the sponsor's attention.</p></div>
+  <div class="card"><div class="icon">✓</div><h3>Verified data</h3><p>Information is designed to flow from institutional systems rather than unverified parent reports.</p></div>
+  <div class="card"><div class="icon">⌁</div><h3>Audit-ready</h3><p>Role-based access, audit logging and institution-controlled permissions are built into the product vision.</p></div>
+  <div class="card"><div class="icon">∞</div><h3>Scalable SaaS</h3><p>One platform can serve multiple universities while each institution controls its own environment.</p></div>
+ </div>
+</section>
+
+<section id="universities">
+ <div class="split">
+  <div><span class="eyebrow">FOR UNIVERSITIES</span><h2>Turn sponsor communication into a digital service.</h2><p style="color:var(--muted);line-height:1.7">Involved is positioned as an institution-authorized sponsor access layer — not a student surveillance product.</p>
+   <div class="points"><div class="point"><span class="check">✓</span><span><b>Institution-controlled access</b><br><span style="color:var(--muted)">Universities define the access framework.</span></span></div><div class="point"><span class="check">✓</span><span><b>Read-only visibility</b><br><span style="color:var(--muted)">Sponsors view verified information without changing academic records.</span></span></div><div class="point"><span class="check">✓</span><span><b>Integration-ready</b><br><span style="color:var(--muted)">Designed around Registry and Finance data sources.</span></span></div></div>
+  </div>
+  <div class="pillbox"><div class="tiny">INSTITUTION DATA FLOW</div><div class="row"><span>Academic Registry</span><span>→ Involved</span></div><div class="row"><span>Finance Office</span><span>→ Involved</span></div><div class="row"><span>Student Records</span><span>→ Involved</span></div><div class="row"><span>Authorized Sponsor</span><span>← Secure view</span></div></div>
+ </div>
+</section>
+
+<section id="business">
+ <div class="center"><span class="eyebrow">BUSINESS MODEL</span><h2>Simple pricing. Recurring revenue. University scale.</h2><p>The current concept uses a parent subscription model with potential institution revenue-sharing.</p></div>
+ <div class="pricing card"><div class="tiny">PARENT / SPONSOR</div><div class="price">UGX 20,000 <small>/ semester</small></div><p>Subscription access to the Involved sponsor portal.</p><div class="row"><span>Recurring</span><b>Per semester</b></div><div class="row"><span>Expansion</span><b>Multi-university</b></div><div class="row"><span>Potential B2B</span><b>Institution plans</b></div></div>
+</section>
+
+<section>
+ <div class="center"><span class="eyebrow">ROADMAP</span><h2>From prototype to national infrastructure.</h2></div>
+ <div class="grid">
+  <div class="card"><h3>01 • Pilot</h3><p>Launch with a small university cohort, validate sponsor demand and refine the dashboard.</p></div>
+  <div class="card"><h3>02 • Integrate</h3><p>Connect approved Registry and Finance data sources with secure institutional APIs.</p></div>
+  <div class="card"><h3>03 • Scale</h3><p>Expand across Ugandan universities and develop institutional analytics and partnerships.</p></div>
+ </div>
+</section>
+
+<div class="cta"><h2>Let's make higher education more transparent.</h2><p>See the product. Test the experience. Explore the partnership.</p><button class="primary" onclick="openDemo()">Launch Live Demo</button></div>
+<footer class="footer"><span>© 2026 Involved — Campus. Connected.</span><span>Investor prototype • Demo data only</span></footer>
+</div>
+
+<div class="modal" id="modal">
+ <div class="modalbox">
+  <button class="close" onclick="closeDemo()">✕</button>
+  <div class="login" id="login">
+   <span class="eyebrow">DEMO ACCESS</span><h2>Enter the Involved Parent Portal</h2><p style="color:var(--muted)">This is a simulated investor environment. No real student records are used.</p>
+   <div class="demo"><b>Demo credentials</b><br>Parent: demo@involved.ug<br>Password: demo123</div>
+   <input id="email" value="demo@involved.ug" placeholder="Email"><input id="pass" type="password" value="demo123" placeholder="Password"><button onclick="login()">Enter Demo Portal →</button>
+  </div>
+  <div id="portal" style="display:none">
+   <div class="tiny">INSTITUTION VERIFIED • DEMO ENVIRONMENT</div><h2>Good morning, Sarah 👋🏽</h2><p style="color:var(--muted)">Sponsor dashboard for <b>Brian Namukasa</b></p>
+   <div class="grid" style="margin-top:20px">
+    <div class="card"><div class="tiny">CURRENT SEMESTER</div><h3>Semester II • 2026</h3><p class="positive"><b>Registration Active</b></p></div>
+    <div class="card"><div class="tiny">CURRENT GPA</div><h3>3.62 / 5.00</h3><p>↑ 0.18 from last semester</p></div>
+    <div class="card"><div class="tiny">OUTSTANDING FEES</div><h3 class="balance">UGX 820,000</h3><p>Deadline: 30 Sept 2026</p></div>
+   </div>
+   <div class="card" style="margin-top:18px"><h3>Academic snapshot</h3><div class="row"><span>Database Systems</span><b>A-</b></div><div class="row"><span>Networks & Security</span><b>B+</b></div><div class="row"><span>Web Programming</span><b>A</b></div><div class="row"><span>Software Engineering</span><b>B</b></div></div>
+   <div class="card" style="margin-top:18px"><h3>Important alerts</h3><p>🔔 Fee balance reminder — payment deadline approaching.</p><p>📚 Academic update — 4 course results available.</p><p>✓ Registration verified by institution.</p></div>
+  </div>
+ </div>
+</div>
+<script>
+function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
+function openDemo(){document.getElementById('modal').classList.add('show')}
+function closeDemo(){document.getElementById('modal').classList.remove('show')}
+function login(){document.getElementById('login').style.display='none';document.getElementById('portal').style.display='block'}
+</script>
+</body>
+</html>
